@@ -1,6 +1,6 @@
 pkgname=qt6-qtquicktimeline
-pkgver=6.9.2
-pkgrel=1
+pkgver=6.10.0
+pkgrel=2
 pkgdesc="Qt module for keyframe-based timeline construction"
 arch=('x86_64')
 url="https://www.qt.io"
@@ -22,7 +22,7 @@ makedepends=(
     'ninja'
 )
 source=(git+https://code.qt.io/qt/${pkgname#*-}#tag=v${pkgver})
-sha256sums=(e032b226425d6c7a528ac51fea7886aacd8be78d38a8e882ad8ed00e62989ad5)
+sha256sums=(1d2fd155f1f6d6595af700d1c17650df78247078f62c74b9b062526ea1a7d99f)
 
 build() {
     cd ${pkgname#*-}
@@ -46,4 +46,3 @@ package() {
 
     DESTDIR=${pkgdir} cmake --install flarebird-build
 }
-
